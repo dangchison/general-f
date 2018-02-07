@@ -1,0 +1,46 @@
+<section class="general-footer">
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned grid container">
+      <div class="column row footer-auth">
+        <h2 class="ui inverted header">
+          {{$t('footer.title')}}
+          <div class="sub header" v-html="$t('footer.sub_title')"></div>
+        </h2>
+      </div>
+
+      <div class="column row footer-share">
+        <social-sharing inline-template>
+          <div class="ui horizontal relaxed list list-social">
+            <network network="facebook" class="item">
+              <i class="facebook f large icon"></i>
+            </network>
+
+            <network network="googleplus" class="item">
+              <i class="google plus large icon"></i>
+            </network>
+
+            <network network="twitter" class="item">
+              <i class="twitter large icon"></i>
+            </network>
+
+            <network network="pinterest" class="item">
+              <i class="pinterest large icon"></i>
+            </network>
+
+            <network network="linkedin" class="item">
+              <i class="linkedin large icon"></i>
+            </network>
+
+            <network network="skype" class="item">
+              <i class="skype large icon"></i>
+            </network>
+          </div>
+        </social-sharing>
+      </div>
+
+      <div class="column row footer-copy">
+        <p v-html="$t('footer.copyright')"></p>
+      </div>
+    </div>
+  </div>
+</section>

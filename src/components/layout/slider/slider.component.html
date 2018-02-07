@@ -1,0 +1,7 @@
+<section class="slider">
+  <slick ref="slick" :options="slickOptions">
+    <a class="ui fluid image" v-for="item in slickSlider">
+      <img :src="item.avatar_url">
+    </a>
+  </slick>
+</section>

@@ -1,0 +1,46 @@
+.what-we-do {
+  .wwd-box {
+    cursor: pointer;
+    margin: 0 0 30px;
+
+    i.icon.circle-bordered {
+      border: 1px dashed #ccc;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      display: inline-block;
+      line-height: 128px;
+      transition: all .3s ease;
+
+      &:hover {
+        background: #0cc652;
+        box-shadow: 0 12px 22px rgba(0,0,0,.15);
+        border: 0 dashed #ccc;
+        color: #ffffff;
+      }
+    }
+
+    &:hover {
+      i.icon.circle-bordered {
+        background: #0cc652;
+        box-shadow: 0 12px 22px rgba(0,0,0,.15);
+        border: 0 dashed #ccc;
+        color: #ffffff;
+      }
+    }
+
+    .title {
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .description {
+      color: #8b8e93;
+    }
+  }
+}

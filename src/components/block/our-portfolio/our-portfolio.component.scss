@@ -1,0 +1,86 @@
+.our-portfolio {
+  padding-bottom: 50px;
+
+  .ui.reveal {
+    cursor: pointer;
+    .hidden.content {
+      .portfolio-content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 20px 0;
+        color: #fff;
+        transform: translateY(-50%);
+        text-align: center;
+
+        .group.icon {
+          margin: 20px 0;
+
+          a {
+            color: #fff;
+
+            i.circular.icon {
+              box-shadow: 0 0 0 1px #fff inset;
+
+              &:hover {
+                background-color: #fff;
+                color: #0cc652;
+              }
+            }
+          }
+        }
+
+        .description {
+          font-size: 16px;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        margin: 20px;
+        transform: scale(0);
+        transition: opacity .4s,-webkit-transform .4s cubic-bezier(.4,0,.2,1);
+        transition: transform .4s cubic-bezier(.4,0,.2,1),opacity .4s;
+        transition: transform .4s cubic-bezier(.4,0,.2,1),opacity .4s,-webkit-transform .4s cubic-bezier(.4,0,.2,1);
+        background: rgba(12,198,82,.7);
+      }
+    }
+
+    &:hover {
+      .hidden.content {
+        z-index: 5 !important;
+
+        &::before {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .portfolio-filter {
+    text-align: center;
+    padding: 0 0 18px;
+
+    .ui.horizontal.list>.item {
+      >.content {
+        font-size: 15px;
+        cursor: pointer;
+        text-transform: capitalize;
+      }
+
+      &.active>.content {
+        font-weight: bold;
+        color: #0cc652;
+      }
+    }
+  }
+}

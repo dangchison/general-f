@@ -1,0 +1,43 @@
+<section class="contact">
+  <div class="ui container">
+    <h1 class="ui header header-bordered">
+      <span class="title" v-html="$t('contact.title')"></span>
+      <div class="sub header" v-html="$t('contact.sub_title')"></div>
+    </h1>
+
+    <div class="ui stackable grid">
+      <div class="six wide column">
+        <div class="ui relaxed list contact-list">
+          <div class="item">
+            <i class="marker large icon"></i>
+            <div class="middle aligned content" v-html="$t('contact.address')"></div>
+          </div>
+          <div class="item">
+            <i class="call large icon"></i>
+            <div class="middle aligned content" v-html="$t('contact.phone')"></div>
+          </div>
+          <div class="item">
+            <i class="mail outline large icon"></i>
+            <div class="middle aligned content" v-html="$t('contact.email')"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ten wide column">
+        <form class="ui form">
+          <div class="two fields">
+            <div class="field">
+              <input type="text" :placeholder="$t('contact.form_name')">
+            </div>
+            <div class="field">
+              <input type="email" :placeholder="$t('contact.form_email')">
+            </div>
+          </div>
+          <div class="field">
+            <textarea :placeholder="$t('contact.form_message')" rows="12"></textarea>
+          </div>
+          <button class="ui green right floated button" v-html="$t('contact.form_button')"></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

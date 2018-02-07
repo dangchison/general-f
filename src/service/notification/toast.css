@@ -1,0 +1,84 @@
+.et-wrapper {
+  padding: 0;
+  margin: 10px 10px 0 0;
+  border-radius: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  max-width: 400px;
+}
+
+.et-wrapper:hover {
+  opacity: 1;
+  box-shadow: #000 0 0 12px;
+}
+
+.et-wrapper.et-success {
+  background-color: rgb(104, 197, 28);
+}
+
+.et-wrapper.et-error {
+  background-color: #D5122B;
+}
+
+.et-wrapper.et-info {
+  background-color: #4196E1;
+}
+
+.et-wrapper.et-warning {
+  background-color: #F5AA1E;
+}
+
+.et-wrapper .et-close {
+  font-size: 20px;
+}
+
+.et-wrapper .notify-warp {
+  padding: 10px 20px;
+  text-align: left;
+  width: 250px;
+  box-shadow: #3c3b3b 0 0 12px;
+  overflow: hidden;
+}
+
+.notify-warp .notify-icon,
+.notify-warp .notify-description {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.notify-icon {
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.notify-icon i {
+  font-size: 25px;
+}
+
+.notify-warp .notify-description {
+  width: calc(100% - 60px);
+}
+
+.notify-warp_no-icon .notify-description {
+  width: 100%;
+}
+
+.notify-description .title,
+.notify-description .content {
+  color: #fff;
+}
+
+.notify-description .title {
+  font-size: 18px;
+  padding: 0;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 260px;
+  overflow: hidden;
+}
+
+.notify-description .content {
+  padding-top: 5px;
+  word-break: break-word;
+}

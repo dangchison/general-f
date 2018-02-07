@@ -1,0 +1,18 @@
+<section class="our-team">
+  <h1 class="ui center aligned header header-bordered">
+    <span class="title" v-html="$t('team_members.title')"></span>
+    <div class="sub header" v-html="$t('team_members.sub_title')"></div>
+  </h1>
+
+  <div class="ui container">
+    <slick ref="slickTeam" :options="slickOptions" v-if="teamsMember.length > 0">
+      <a class="team-box" v-for="item in teamsMember">
+        <img class="ui fluid bordered image" :src="showImage(item.image)">
+        <h4 class="ui center aligned header">
+          {{item.name}}
+          <div class="sub header" v-html="item.position"></div>
+        </h4>
+      </a>
+    </slick>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+.general-footer {
+  .ui.footer {
+    padding: 50px 0 0;
+
+    .footer {
+      &-auth {
+        margin-bottom: 20px;
+        .ui.header {
+          .sub.header {
+            margin-top: 30px;
+          }
+        }
+      }
+      &-copy {
+        border-top: 1px solid rgba(255,255,255,.05);
+        margin-top: 20px;
+        p {
+          padding-top: 10px;
+          font-size: 12px;
+          line-height: 17px;
+          color: rgba(255,255,255,.5);
+        }
+      }
+    }
+  }
+}

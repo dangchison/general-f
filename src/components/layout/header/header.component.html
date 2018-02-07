@@ -1,0 +1,42 @@
+<section class="general-header" v-on:scroll="handleScroll">
+  <div class="following bar" :class="{'light fixed': scrolled}">
+    <div class="ui container">
+      <div class="ui large secondary network menu" :class="{'inverted': !scrolled}">
+        <div class="item">
+          <div class="ui logo shape">
+            <div class="sides">
+              <div class="active ui side">
+                <img class="ui image" src="../../../assets/logo.png" width="50px">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right menu">
+          <div class="ui language floating dropdown link item">
+            <i class="translate icon"></i>
+            <div class="text" ref="language" v-html="langDefault"></div>
+            <div class="menu">
+              <div class="header" v-html="$t('header.languages.search')"></div>
+              <div class="ui icon search input">
+                <i class="search icon"></i>
+                <input type="text" :placeholder="$t('header.languages.placeholder')">
+              </div>
+              <div class="scrolling menu">
+                <div class="item" :data-value="item.val" :data-english="item.key" v-for="item in languages">
+                  <span class="description" v-html="item.name"></span>
+                  {{item.key}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <transition name="slide-fade">
+    <div class="to top page" v-if="goToTop" @click="scrollToTop">
+      <i class="circular inverted teal arrow up large icon"></i>
+    </div>
+  </transition>
+</section>
