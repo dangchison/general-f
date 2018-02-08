@@ -1,0 +1,29 @@
+<section class="element-team">
+  <div class="ui card team">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <button class="ui circular facebook icon button">
+              <i class="facebook f icon"></i>
+            </button>
+            <button class="ui circular twitter icon button">
+              <i class="twitter icon"></i>
+            </button>
+            <button class="ui circular linkedin icon button">
+              <i class="linkedin icon"></i>
+            </button>
+            <button class="ui circular google plus icon button">
+              <i class="google plus icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <img :src="showImage(employee.image)">
+    </div>
+    <div class="content">
+      <a class="header" v-html="employee.name"></a>
+      <div class="description" v-html="employee.position"></div>
+    </div>
+  </div>
+</section>

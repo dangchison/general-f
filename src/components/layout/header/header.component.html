@@ -16,14 +16,15 @@
             <i class="translate icon"></i>
             <div class="text" ref="language" v-html="langDefault"></div>
             <div class="menu">
-              <div class="header" v-html="$t('header.languages.search')"></div>
-              <div class="ui icon search input">
+              <div class="header" v-html="$t('header.languages.search')" v-if="isSearchLang"></div>
+              <div class="ui icon search input" v-if="isSearchLang">
                 <i class="search icon"></i>
                 <input type="text" :placeholder="$t('header.languages.placeholder')">
               </div>
-              <div class="scrolling menu">
+              <div class="scrolling menu" :class="{'scrolling menu': isSearchLang}">
                 <div class="item" :data-value="item.val" :data-english="item.key" v-for="item in languages">
-                  <span class="description" v-html="item.name"></span>
+                  <i class="flag" :class="item.icon"></i>
+                  <span class="description" v-html="item.name" v-if="isSearchLang"></span>
                   {{item.key}}
                 </div>
               </div>

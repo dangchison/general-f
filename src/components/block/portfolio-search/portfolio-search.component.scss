@@ -1,0 +1,17 @@
+.portfolio-search {
+  text-align: center;
+  padding: 0 0 18px;
+
+  .ui.horizontal.list>.item {
+    >.content {
+      font-size: 15px;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+
+    &.active>.content {
+      font-weight: bold;
+      color: #0cc652;
+    }
+  }
+}

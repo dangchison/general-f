@@ -1,0 +1,10 @@
+<section class="portfolio-search">
+  <div class="ui relaxed horizontal list">
+    <div class="item" :class="{'active': isActive('all')}">
+      <div class="content" @click="search('all')" v-html="$t('our_portfolio.see_all')"></div>
+    </div>
+    <div class="item" v-for="item in allKeyPortfolios" :class="{'active': isActive(item)}">
+      <div class="content" @click="search(item)" v-html="showKey(item)"></div>
+    </div>
+  </div>
+</section>
