@@ -1,47 +1,26 @@
 import { mapGetters, mapActions } from 'vuex'
+import PortfolioItem from '@/components/block/our-portfolio/portfolio-item'
+import PortfolioSearch from '@/components/block/our-portfolio/portfolio-search'
 
 export default {
   name: 'OurPortfolio',
-  components: {},
+  components: { PortfolioItem, PortfolioSearch },
   props: [],
   data () {
     return {
-      keyName: 'all'
+
     }
   },
   created () {
     this.getAllPortfolio()
   },
-  computed: Object.assign(
-    {},
-    mapGetters([
-      'allPortfolios',
-      'allKeyPortfolios'
-    ])
-  ),
+  computed: mapGetters([
+    'allPortfolios'
+  ]),
   mounted () {
 
   },
-  methods: Object.assign(
-    {},
-    mapActions([
-      'getAllPortfolio',
-      'searchPortfolio'
-    ]),
-    {
-      getImage (image) {
-        return require(`@/assets/images/portfolio/${image}`)
-      },
-      showKey (key) {
-        return key.replace('_', ' ')
-      },
-      search (key) {
-        this.searchPortfolio(key)
-        this.keyName = key
-      },
-      isActive (key) {
-        return this.keyName === key
-      }
-    }
-  )
+  methods: mapActions([
+    'getAllPortfolio'
+  ])
 }

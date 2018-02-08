@@ -1,9 +1,10 @@
 import { mapActions, mapGetters } from 'vuex'
 import Slick from 'vue-slick'
+import TeamItem from '@/components/block/our-team/team-item'
 
 export default {
   name: 'OurTeam',
-  components: { Slick },
+  components: { Slick, TeamItem },
   props: [],
   data () {
     return {
@@ -39,11 +40,13 @@ export default {
     {},
     mapActions([
       'getAllTeam'
-    ]),
-    {
-      showImage (src) {
-        return require(`@/assets/images/employee/${src}`)
-      }
-    }
-  )
+    ])
+  ),
+  updated () {
+    this.$nextTick(() => {
+      $('.card.team .image').dimmer({
+        on: 'hover'
+      })
+    })
+  }
 }

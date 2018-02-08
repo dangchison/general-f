@@ -1,0 +1,22 @@
+<section class="element-portfolio">
+  <div class="ui fade reveal image">
+    <div class="visible content">
+      <img :src="getImage(portfolio.image)">
+    </div>
+    <div class="hidden content">
+      <img :src="getImage(portfolio.image)">
+      <div class="portfolio-content">
+        <div class="group icon">
+          <a>
+            <i class="linkify large circular icon"></i>
+          </a>
+          <a>
+            <i class="search large circular icon"></i>
+          </a>
+        </div>
+
+        <div class="description" v-html="portfolio.name"></div>
+      </div>
+    </div>
+  </div>
+</section>

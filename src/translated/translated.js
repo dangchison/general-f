@@ -4,7 +4,7 @@ import env from '../environment/environment'
 
 // Language libary
 import languageEn from './lang/en'
-import languageVi from './lang/vi'
+import languageVn from './lang/vn'
 
 // Datetime libary
 import datetimeEn from './date/en'
@@ -14,7 +14,7 @@ Vue.use(VueI18n)
 
 const messages = {
   en: languageEn,
-  vi: languageVi
+  vn: languageVn
 }
 
 const dateTimeFormats = {

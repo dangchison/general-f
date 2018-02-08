@@ -3,7 +3,7 @@ import {RECEIVE_LANGUAGES} from '@/store/mutations'
 
 const state = {
   all: [],
-  arr_lang: ['en', 'vi']
+  arr_lang: ['en', 'vn']
 }
 
 const getters = {

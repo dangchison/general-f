@@ -5,14 +5,8 @@
   </h1>
 
   <div class="ui container">
-    <slick ref="slickTeam" :options="slickOptions" v-if="teamsMember.length > 0">
-      <a class="team-box" v-for="item in teamsMember">
-        <img class="ui fluid bordered image" :src="showImage(item.image)">
-        <h4 class="ui center aligned header">
-          {{item.name}}
-          <div class="sub header" v-html="item.position"></div>
-        </h4>
-      </a>
+    <slick ref="slickTeam" :options="slickOptions" v-if="teamsMember.length > 0" class="slick team">
+      <team-item :employee="item" v-for="item in teamsMember" :key="item.name" />
     </slick>
   </div>
 </section>
