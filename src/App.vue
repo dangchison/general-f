@@ -3,7 +3,12 @@
     <!-- preloader -->
     <transition name="fade">
       <div class="preloader" v-if="!show">
-        <div class="ui massive active centered inline text loader"></div>
+        <div class="sk-folding-cube">
+          <div class="sk-cube1 sk-cube"></div>
+          <div class="sk-cube2 sk-cube"></div>
+          <div class="sk-cube4 sk-cube"></div>
+          <div class="sk-cube3 sk-cube"></div>
+        </div>
       </div>
     </transition>
     <!-- /preloader -->
@@ -56,86 +61,9 @@ export default {
 </script>
 
 <style>
-  @import url('../node_modules/semantic-ui-css/components/reset.min.css');
-  @import url('./assets/css/site.css');
-  @import url('../node_modules/semantic-ui-css/components/container.min.css');
-  @import url('../node_modules/semantic-ui-css/components/grid.min.css');
-  @import url('../node_modules/semantic-ui-css/components/icon.min.css');
-  @import url('../node_modules/semantic-ui-css/components/accordion.min.css');
-  @import url('../node_modules/semantic-ui-css/components/button.min.css');
-  @import url('../node_modules/semantic-ui-css/components/comment.min.css');
-  @import url('../node_modules/semantic-ui-css/components/dimmer.min.css');
-  @import url('../node_modules/semantic-ui-css/components/dropdown.min.css');
-  @import url('../node_modules/semantic-ui-css/components/form.min.css');
-  @import url('../node_modules/semantic-ui-css/components/input.min.css');
-  @import url('../node_modules/semantic-ui-css/components/header.min.css');
-  @import url('../node_modules/semantic-ui-css/components/item.min.css');
-  @import url('../node_modules/semantic-ui-css/components/search.min.css');
-  @import url('../node_modules/semantic-ui-css/components/sidebar.min.css');
-  @import url('../node_modules/semantic-ui-css/components/menu.min.css');
-  @import url('../node_modules/semantic-ui-css/components/popup.min.css');
-  @import url('../node_modules/semantic-ui-css/components/progress.min.css');
-  @import url('../node_modules/semantic-ui-css/components/label.min.css');
-  @import url('../node_modules/semantic-ui-css/components/loader.min.css');
-  @import url('../node_modules/semantic-ui-css/components/modal.min.css');
-  @import url('../node_modules/semantic-ui-css/components/transition.min.css');
-  @import url('../node_modules/semantic-ui-css/components/list.min.css');
-  @import url('../node_modules/semantic-ui-css/components/image.min.css');
-  @import url('../node_modules/semantic-ui-css/components/segment.min.css');
-  @import url('../node_modules/semantic-ui-css/components/message.min.css');
-  @import url('../node_modules/semantic-ui-css/components/reveal.min.css');
+  @import url('../node_modules/semantic-ui-css/semantic.min.css');
   @import url('../node_modules/slick-carousel/slick/slick.css');
   @import url('./service/notification/toast.css');
-
-.preloader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: hsl(0, 0%, 100%);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter,
-.slide-fade-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity .3s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-.fade-slow-enter-active,
-.fade-slow-leave-active {
-  transition: opacity 3s;
-}
-.fade-slow-enter,
-.fade-slow-leave-to {
-  opacity: 0;
-}
-.ui.list.list-social>.item {
-  cursor: pointer;
-}
+  @import url('./assets/css/loading.css');
+  @import url('./assets/css/style.css');
 </style>

@@ -5,40 +5,12 @@
   </h1>
 
   <div class="ui container">
-    <div class="portfolio-filter">
-      <div class="ui relaxed horizontal list">
-        <div class="item" :class="{'active': isActive('all')}">
-          <div class="content" @click="search('all')" v-html="$t('our_portfolio.see_all')"></div>
-        </div>
-        <div class="item" v-for="item in allKeyPortfolios" :class="{'active': isActive(item)}">
-          <div class="content" @click="search(item)" v-html="showKey(item)"></div>
-        </div>
-      </div>
-    </div>
+    <portfolio-search />
 
     <transition class="fade">
       <div class="ui three column doubling grid">
         <div class="column" v-for="portfolio in allPortfolios">
-          <div class="ui fade reveal image">
-            <div class="visible content">
-              <img :src="getImage(portfolio.image)">
-            </div>
-            <div class="hidden content">
-              <img :src="getImage(portfolio.image)">
-              <div class="portfolio-content">
-                <div class="group icon">
-                  <a>
-                    <i class="linkify large circular icon"></i>
-                  </a>
-                  <a>
-                    <i class="search large circular icon"></i>
-                  </a>
-                </div>
-
-                <div class="description" v-html="portfolio.name"></div>
-              </div>
-            </div>
-          </div>
+          <element-portfolio :portfolio="portfolio"/>
         </div>
       </div>
     </transition>

@@ -16,10 +16,18 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
     this.getAllLanguages()
   },
-  computed: mapGetters([
-    'languages',
-    'arr_lang'
-  ]),
+  computed: Object.assign(
+    {},
+    mapGetters([
+      'languages',
+      'arr_lang'
+    ]),
+    {
+      isSearchLang () {
+        return this.languages.length >= 10
+      }
+    }
+  ),
   mounted () {
     $('.ui.dropdown.language').dropdown({
       onChange: (value, text, $selectedItem) => {
