@@ -1,10 +1,10 @@
 import { mapActions, mapGetters } from 'vuex'
 import Slick from 'vue-slick'
-import BlockEmployee from '@/components/block/element-team'
+import TeamItem from '@/components/block/our-team/team-item'
 
 export default {
   name: 'OurTeam',
-  components: { Slick, BlockEmployee },
+  components: { Slick, TeamItem },
   props: [],
   data () {
     return {

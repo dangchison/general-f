@@ -6,7 +6,7 @@
 
   <div class="ui container">
     <slick ref="slickTeam" :options="slickOptions" v-if="teamsMember.length > 0" class="slick team">
-      <block-employee :employee="item" v-for="item in teamsMember" :key="item.name" />
+      <team-item :employee="item" v-for="item in teamsMember" :key="item.name" />
     </slick>
   </div>
 </section>

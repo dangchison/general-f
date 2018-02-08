@@ -1,10 +1,10 @@
 import { mapGetters, mapActions } from 'vuex'
-import ElementPortfolio from '@/components/block/element-portfolio'
-import PortfolioSearch from '@/components/block/portfolio-search'
+import PortfolioItem from '@/components/block/our-portfolio/portfolio-item'
+import PortfolioSearch from '@/components/block/our-portfolio/portfolio-search'
 
 export default {
   name: 'OurPortfolio',
-  components: { ElementPortfolio, PortfolioSearch },
+  components: { PortfolioItem, PortfolioSearch },
   props: [],
   data () {
     return {
