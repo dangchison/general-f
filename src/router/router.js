@@ -1,5 +1,5 @@
-import GeneralContainer from '@/components/layout/container'
-import HomePage from '@/components/home'
+import GeneralContainer from '@/views/layout/container'
+import HomePage from '@/views/home'
 
 const appRouter = [
   {
