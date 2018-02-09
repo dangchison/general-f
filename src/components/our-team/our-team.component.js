@@ -1,6 +1,6 @@
 import { mapActions, mapGetters } from 'vuex'
 import Slick from 'vue-slick'
-import TeamItem from '@/components/block/our-team/team-item'
+import TeamItem from '@/components/our-team/team-item'
 
 export default {
   name: 'OurTeam',
