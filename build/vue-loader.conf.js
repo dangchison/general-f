@@ -20,3 +20,19 @@ module.exports = {
     image: 'xlink:href'
   }
 }
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        loader: 'vue-template-loader',
+        options: {
+          transformToRequire: {
+            img: 'src'
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
-import GeneralHeader from '@/components/layout/header'
-import GeneralFooter from '@/components/layout/footer'
-import GeneralSlider from '@/components/layout/slider'
+import GeneralHeader from '@/views/layout/header'
+import GeneralFooter from '@/views/layout/footer'
+import GeneralSlider from '@/views/layout/slider'
 
 export default {
   name: 'Container',
