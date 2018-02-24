@@ -3,6 +3,7 @@ export default {
     lang_error: 'This language is not supported yet'
   },
   header: {
+    title: 'Code Shark',
     languages: {
       search: 'Search Languages',
       placeholder: 'Search languages...'
